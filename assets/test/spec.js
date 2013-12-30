@@ -2,7 +2,7 @@ define(['chai','nanodom'], function(chai, dom) {
 
     var assert = chai.assert;
 
-    describe('TAGHUB DOM', function() {
+    describe('NANODOM', function() {
 
         it('Can query by css selectors', function() {
             var element = dom('#mocha')

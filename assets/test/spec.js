@@ -65,7 +65,7 @@ define(['chai','nanodom'], function(chai, dom) {
             element.remove()
         })
 
-        it('Allows passing th.dom element', function() {
+        it('Allows passing nanodom element', function() {
             var element = dom('<div class="eple"></div>');
             var another = dom(element);
             assert.equal(element, another);

@@ -19,23 +19,20 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['lib/{,*/}*.js'],
-        dest: 'dist/<%= pkg.name %>.v<%= pkg.version %>.js'
+        src: ['assets/lib/{,*/}*.js'],
+        dest: 'assets/dist/<%= pkg.name %>.v<%= pkg.version %>.js'
       }
     },
     uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.v<%= pkg.version %>.min.js'
+        dest: 'assets/dist/<%= pkg.name %>.v<%= pkg.version %>.min.js'
       }
     },
     jshint: {
       options: grunt.file.readJSON('.jshintrc'),
       lib_test: {
-        src: ['lib/{,*/}*.js']
+        src: ['assets/lib/{,*/}*.js']
       }
     },
     mochaTest: {
@@ -70,10 +67,8 @@ module.exports = function(grunt) {
 
 
 
-  // Default task.
-  grunt.registerTask('default', ['concat', 'uglify']);
-
-  // Specific tasks
+  // TASKS
+  grunt.registerTask('build',  ['concat', 'uglify']);
   grunt.registerTask('server', ['connect','watch']);
   grunt.registerTask('hint', ['jshint']);
 

@@ -1,36 +1,33 @@
-// Uses AMD or browser globals to create a module.
-
-// Grabbed from https://github.com/umdjs/umd/blob/master/amdWeb.js.
-// Check out https://github.com/umdjs/umd for more patterns.
-
-// Defines a module "nanodom".
-// Note that the name of the module is implied by the file name. It is best
-// if the file name and the exported global have matching names.
-
-// If you do not want to support the browser global path, then you
-// can remove the `root` use and the passing `this` as the first arg to
-// the top function.
-
 (function (root, factory) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define([], factory);
-    } else {
-        // Browser globals
-        root.nanodom = factory();
-    }
+    (typeof define === 'function' && define.amd) ? define([], factory) : root.nanodom = factory();
 }(this, function () {
-    'use strict';
 
-    /*** YOUR LIBRARY CODE GOES HERE! ***/
-
-    function nanodom(complicated_question) {
-        return (complicated_question === 'The life, universe and everything?') ? 'YO!' : 'YO!';
+    function dom() {}
+    dom.prototype             = new Array;
+    dom.prototype.append      = function(element)  { element.map(function(e) { this[0].appendChild(e) }.bind(this)); return this}
+    dom.prototype.remove      = function()         { this.map(function(e) {e.parentNode.removeChild(e)}); return this}
+    dom.prototype.prepend     = function(element)  { element.map(function(e) { this[0].insertBefore(e, this[0].childNodes[0]) }.bind(this)); return this}
+    dom.prototype.empty       = function(elements) { this.map(function(e) { e.innerHTML = ""}); return this}
+    dom.prototype.addClass    = function(classes)  { this.map(function(e) { e.className += ' '+classes}); return this}
+    dom.prototype.removeClass = function(classes)  {
+        this.map(function(e) {
+            e.className = e.className.split(' ').reduce(function(prev, cls) {
+                    return (classes.indexOf(cls) < 0) ? prev.concat(cls) : prev;
+            },[]).join(' ');
+        })
+        return this
     }
 
-    // Return a value to define the module export.
-    // This example returns a functions, but the module
-    // can return an object as the exported value.
-    return nanodom;
+    function domify(str) { var d = document.createElement('div'); d.innerHTML = str; return d.childNodes }
+
+    return function(selector) {
+        if (selector instanceof dom) return selector
+        if (selector instanceof HTMLElement) {var d = new dom(); d.push(selector); return d}
+        if (typeof selector !== 'string') return
+        var s, d=new dom(), c=(selector.indexOf('<') == 0);
+        s = c ? domify(selector) : document.querySelectorAll(selector);
+        [].slice.call(s).map(function(e) {d.push(e)})
+        return d
+    }
+
 }));

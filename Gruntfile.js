@@ -46,25 +46,35 @@ module.exports = function(grunt) {
         src: ['test/*.js']
       }
     },
+    connect : {
+        options: {
+            port       : 9000,
+            livereload : 35729,
+            hostname   : 'localhost'
+        },
+        livereload: {
+            options: {
+                open: true,
+                base: 'assets'
+            }
+        }
+    },
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
-      }
+        livereload: {
+            options: { livereload: '<%= connect.options.livereload %>' },
+            files : ['assets/{,*/}*.js'],
+            tasks : []
+        }
     }
   });
 
-  
+
 
   // Default task.
-  grunt.registerTask('default', ['mochaTest', 'concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 
   // Specific tasks
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('server', ['connect','watch']);
   grunt.registerTask('hint', ['jshint']);
 
 };

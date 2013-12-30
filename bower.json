@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
-    
+    "chai": "~1.8.1",
+    "requirejs": "~2.1.9",
+    "mocha": "~1.16.2"
   }
 }
-

@@ -17,3 +17,7 @@ Nanodom is a small [UMD](https://github.com/umdjs/umd) (AMD compatible) dom mani
 For full documentation see the [spec](https://github.com/asbjornenge/nanodom/blob/master/assets/test/spec.js).  
 
 enjoy.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asbjornenge/nanodom/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

@@ -1,7 +1,15 @@
 # nanodom
 
-<!--[![Build Status](https://secure.travis-ci.org/asbjorn/nanodom.png?branch=master)](http://travis-ci.org/asbjorn/nanodom)
--->
+-----------
+
+**CHANGES**
+
+I'm currently converting from a hard coded UMD browser module to a node style module pattern using browserify for creating different types of modules.
+
+Stay tuned.
+
+-----------
+
 Nanodom is a small [UMD](https://github.com/umdjs/umd) (AMD compatible) dom manipulation library.   
 
 ### Install
@@ -17,7 +25,4 @@ Nanodom is a small [UMD](https://github.com/umdjs/umd) (AMD compatible) dom mani
 For full documentation see the [spec](https://github.com/asbjornenge/nanodom/blob/master/assets/test/spec.js).  
 
 enjoy.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asbjornenge/nanodom/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

@@ -1,5 +1,8 @@
 # nanodom
 
+![browser support](https://ci.testling.com/asbjornenge/nanodom.png)
+](https://ci.testling.com/asbjornenge/nanodom)
+
 -----------
 
 **CHANGES**

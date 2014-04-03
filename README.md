@@ -4,7 +4,7 @@
 
 **CHANGES**
 
-I'm currently converting from a hard coded UMD browser module to a node style module pattern using browserify for creating different types of modules.
+I'm currently converting from a hard coded UMD browser module to a node style module pattern, using browserify for creating different types of modules.
 
 Stay tuned.
 

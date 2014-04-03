@@ -5,6 +5,23 @@
   "author": {
     "name": "Obi-Wan Kenobi"
   },
+ "testling": {
+    "harness": "mocha-bdd",
+    "files": "test/*.js",
+    "browsers": [
+      "ie/9..latest",
+      "chrome/22..latest",
+      "firefox/latest",
+      "safari/latest",
+      "opera/latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+  "scripts": {
+    "test": "mocha --ui bdd"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "~3.6.0",

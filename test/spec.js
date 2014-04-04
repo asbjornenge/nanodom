@@ -55,10 +55,9 @@ describe('NANODOM', function() {
     })
 
     it('Can add classes', function() {
-        var element = dom('<div></div>').classes().add('eple','kake');
+        var element = dom('<div></div>').classes().add('eple');
         dom('body').append(element)
         assert.equal(dom('.eple').length, 1)
-        assert.equal(dom('.kake').length, 1)
         element.remove()
     })
 

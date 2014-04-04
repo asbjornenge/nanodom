@@ -1,11 +1,11 @@
 {
   "name": "nanodom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://www.youtube.com/watch?v=cDuG95DXbw8",
   "author": {
     "name": "Obi-Wan Kenobi"
   },
- "testling": {
+  "testling": {
     "harness": "mocha-bdd",
     "files": "test/*.js",
     "browsers": [
@@ -25,6 +25,11 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "~3.6.0",
-    "mocha": "~1.18.2"
+    "mocha": "~1.18.2",
+    "gulp-browserify": "~0.5.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-jscrush": "~1.0.0",
+    "gulp-size": "~0.2.0"
   }
 }

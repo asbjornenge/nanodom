@@ -1,6 +1,7 @@
 {
   "name": "nanodom",
   "version": "0.0.2",
+  "main" : "nanodom.js",
   "homepage": "http://www.youtube.com/watch?v=cDuG95DXbw8",
   "author": {
     "name": "Obi-Wan Kenobi"

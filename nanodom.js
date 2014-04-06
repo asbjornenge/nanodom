@@ -3,10 +3,7 @@ dom.prototype             = new Array;
 dom.prototype.append      = function(element)   { element.map(function(e) { this[0].appendChild(e) }.bind(this)); return this }
 dom.prototype.remove      = function()          { this.map(function(e) {e.parentNode.removeChild(e)}); return this }
 dom.prototype.prepend     = function(element)   { element.map(function(e) { this[0].insertBefore(e, (this[0].hasChildNodes()) ? this[0].childNodes[0] : null) }.bind(this)); return this }
-dom.prototype.empty       = function(elements)  { this.map(function(e) { e.innerHTML = ""}); return this }
-dom.prototype.classes     = function()          { return ['add','remove','toggle','contain'].reduce(function(p,c) { p[c] = function() {
-    var a = arguments; this.map(function(e) { e.classList[c].apply(e.classList, a) }); return this
-}.bind(this); return p }.bind(this), {}) }
+dom.prototype.cmap        = function(fn)        { this.map(fn); return this }
 
 function domify(str) { var d = document.createElement('div'); d.innerHTML = str; return d.childNodes }
 

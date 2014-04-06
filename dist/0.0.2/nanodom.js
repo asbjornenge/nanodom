@@ -6,7 +6,7 @@ dom.prototype.remove      = function()          { this.map(function(e) {e.parent
 dom.prototype.prepend     = function(element)   { element.map(function(e) { this[0].insertBefore(e, (this[0].hasChildNodes()) ? this[0].childNodes[0] : null) }.bind(this)); return this }
 dom.prototype.empty       = function(elements)  { this.map(function(e) { e.innerHTML = ""}); return this }
 dom.prototype.classes     = function()          { return ['add','remove','toggle','contain'].reduce(function(p,c) { p[c] = function() {
-    a = arguments; this.map(function(e) { e.classList[c].apply(e.classList, a) }); return this
+    var a = arguments; this.map(function(e) { e.classList[c].apply(e.classList, a) }); return this
 }.bind(this); return p }.bind(this), {}) }
 
 function domify(str) { var d = document.createElement('div'); d.innerHTML = str; return d.childNodes }

@@ -49,20 +49,20 @@ describe('NANODOM', function() {
         container.append(dom('<li>eple</li>'))
         container.append(dom('<li>eple</li>'))
         assert.equal(container[0].childNodes.length, 3)
-        container.cmap(function(e) { e.innerHTML="" })
+        container.each(function(e) { e.innerHTML="" })
         assert.equal(container[0].childNodes.length, 0)
         container.remove()
     })
 
     it('Can add classes', function() {
-        var element = dom('<div></div>').cmap(function(e) { e.classList.add('eple') })
+        var element = dom('<div></div>').each(function(e) { e.classList.add('eple') })
         dom('body').append(element)
         assert.equal(dom('.eple').length, 1)
         element.remove()
     })
 
     it('Can remove classes', function() {
-        var element = dom('<div class="eple kanon"></div>').cmap(function(e) { e.classList.remove('kanon') })
+        var element = dom('<div class="eple kanon"></div>').each(function(e) { e.classList.remove('kanon') })
         dom('body').append(element)
         assert.equal(dom('.kanon').length, 0)
         element.remove()

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Sample Project</title>
+        <script src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+    </head>
+    <body>
+        <h1>My Sample Project</h1>
+        <script>
+            require(['../dist/0.0.2/nanodom.min'], function(dom) {
+                console.log(dom('body'))
+            })
+        </script>
+    </body>
+</html>

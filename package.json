@@ -7,7 +7,7 @@
   },
   "testling": {
     "harness": "mocha-bdd",
-    "files": "test/*.js",
+    "files": "test/spec.js",
     "browsers": [
       "ie/9..latest",
       "chrome/23..latest",
@@ -20,7 +20,8 @@
     ]
   },
   "scripts": {
-    "test": "mocha --ui bdd"
+    "test"      : "mocha --ui bdd",
+    "localtest" : "mocha -R nyan --check-leaks -w test/localtest"
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,6 +31,7 @@
     "gulp-uglify": "~0.2.1",
     "gulp-rename": "~1.2.0",
     "gulp-jscrush": "~1.0.0",
-    "gulp-size": "~0.2.0"
+    "gulp-size": "~0.2.0",
+    "jsdom": "~0.10.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "nanodom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nanodom is a small DOM manipulation library.",
   "keywords": [
     "dom", "browser", "browserify"

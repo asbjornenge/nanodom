@@ -20,8 +20,8 @@
     ]
   },
   "scripts": {
-    "test"      : "mocha --ui bdd",
-    "localtest" : "mocha -R nyan --check-leaks -w test/localtest"
+    "test": "mocha --ui bdd",
+    "localtest": "mocha -R nyan --check-leaks -w test/localtest"
   },
   "dependencies": {},
   "devDependencies": {
@@ -32,6 +32,7 @@
     "gulp-rename": "~1.2.0",
     "gulp-jscrush": "~1.0.0",
     "gulp-size": "~0.2.0",
-    "jsdom": "~0.10.5"
+    "jsdom": "~0.10.5",
+    "gulp-gzip": "0.0.5"
   }
 }

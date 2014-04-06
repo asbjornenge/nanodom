@@ -19,7 +19,7 @@ Nanodom is available on both npm and bower.
 	
 	// Browser AMD
 	require(['nanodom'], function(dom) {
-		dom('body').append(dom('<h1>YEAH!</h1>))
+		dom('.cake').cmap(function(e) { e.classList.add('sprinkles') })
 	})
 	
 	//Browser Script

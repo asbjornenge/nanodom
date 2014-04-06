@@ -1,11 +1,22 @@
 {
   "name": "nanodom",
   "version": "0.0.2",
-  "main" : "nanodom.js",
-  "homepage": "http://www.youtube.com/watch?v=cDuG95DXbw8",
-  "author": {
-    "name": "Obi-Wan Kenobi"
+  "description": "Nanodom is a small DOM manipulation library.",
+  "keywords": [
+    "dom", "browser", "browserify"
+  ],
+  "homepage": "https://github.com/asbjornenge/nanodom",
+  "bugs": "https://github.com/asbjornenge/nanodom/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asbjornenge/nanodom.git"
   },
+  "author": {
+    "name": "asbjornenge",
+    "email": "asbjorn@hanafjedle.net",
+    "url": "https://github.com/asbjornenge"
+  },
+  "main" : "nanodom.js",
   "testling": {
     "harness": "mocha-bdd",
     "files": "test/spec.js",

@@ -5,6 +5,9 @@
 
 Nanodom is a small DOM manipulation library.   
 
+    1500 B nanodom.min.js     // minified
+     665 B nanodom.min.js.gz  // minified+gzipped
+
 ### Install
 
 Nanodom is available on both npm and bower.
